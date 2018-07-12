@@ -1,0 +1,18 @@
+.footer {
+  background-image: url('../img/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $sha-scarlet;
+  background-blend-mode: multiply;
+  box-sizing: border-box;
+}
+.post-footer {
+  background: $sha-black;
+  box-sizing: border-box;
+  color: $sha-font-white;
+  font-family: $light-font, $fallback-font;
+  font-size: .750rem;
+  text-align: center;
+  padding: 2rem 0;
+  user-select: none;
+}

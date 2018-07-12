@@ -1,0 +1,48 @@
+//font face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+	$src: null;
+	$extmods: (
+		eot: "?"
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// Position mixin
+@mixin position($type: static, $top: null, $right: null, $bottom: null, $left:null) {
+	@if($type == 'static' or $type == 'absolute' or $type == 'relative' or $type == 'fixed' or $type == 'sticky') {
+		position: $type;
+		top: $top;
+		right: $right;
+		bottom: $bottom;
+		left: $left;
+	} @else {
+		position: static;
+		@warn "The type `#{$type} isn't valid position attribute. It is set to default value.`";
+	}
+}
+
+@mixin headings {
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: .500rem;
+}
+

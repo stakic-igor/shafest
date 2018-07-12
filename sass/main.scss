@@ -1,0 +1,34 @@
+/**
+* Main settins file.
+* Color of site are in _colors.scss file and should be edited there
+* 
+*/
+
+// Load CSS reset for more consistent behavior between browsers
+@import 'vendor/_reset';
+
+// Load helpers
+@import 'helpers/_variables',
+        'helpers/_functions',
+        'helpers/_mixin';
+
+// Load main settings file
+@import '_settings';
+
+
+// Load Modules
+
+@import 'modules/_typography', 
+        'modules/_general',
+        'modules/_buttons',
+        'modules/_main-nav';
+
+// Load Layout parts
+
+@import 'layout/_header',
+        'layout/_teaser',
+        'layout/_location',
+        'layout/_footer'; 
+
+
+        @import '_underconstruction';

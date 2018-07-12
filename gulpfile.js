@@ -10,13 +10,14 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    assetsPath = '';
+    npmPath = 'node_modules/';
 // Configure sass
 gulp.task('sass', () => {
     return gulp.src('sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
+        includePaths: ['node_modules/bootstrap/scss']
     })
     .on('error', sass.logError))
     .pipe(sourcemaps.write('sourceMap'))
@@ -57,7 +58,6 @@ gulp.task('css:min', () => {
 });
 
 // Configure jsconcat and jsmin
-
 gulp.task('compilejs', function() {
     gulp.src(
         [
@@ -73,15 +73,15 @@ gulp.task('compilejs', function() {
     .pipe(gulp.dest('js/'));
 });
 
-// Task to copy assets (images fonts and favicon) files
-// gulp.task('copy-assets', () => {
-//     gulp.src(
-//         [
-//             //assetsPath + '/**',
-//         ],  {base: assetsPath}
-//     )
-//     .pipe(gulp.dest('web/'));
-// });
+gulp.task('copy-npm', () => {
+    gulp.src(
+        [
+            npmPath + 'jquery/dist/jquery.min.js',
+            //npmPath + 'popper.js/dist/popper.min.js'
+        ],  {base: npmPath}
+    )
+    .pipe(gulp.dest('vendors'));
+});
 
     // Configure watch
 gulp.task('watch', () => {
@@ -101,7 +101,6 @@ gulp.task('build', (callback) => {
         'clean:js', 
         'sass', 
         'autoprefixer',
-        //'copy-assets', 
         'compilejs',
         ['css:min'], 
         callback

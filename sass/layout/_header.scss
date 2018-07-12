@@ -1,0 +1,10 @@
+.header {
+  background-color: white;
+  position: static;
+  transition: all 280ms ease-in;
+  &--fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+} 
