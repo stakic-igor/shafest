@@ -1,3 +1,4 @@
+@charset "utf-8";
 /**
 * Main settins file.
 * Color of site are in _colors.scss file and should be edited there
@@ -21,14 +22,18 @@
 @import 'modules/_typography', 
         'modules/_general',
         'modules/_buttons',
+        'modules/_to-top',
         'modules/_main-nav';
 
 // Load Layout parts
 
 @import 'layout/_header',
         'layout/_teaser',
+        'layout/_miksa',
+        'layout/_news',
         'layout/_location',
-        'layout/_footer'; 
+        'layout/_sponsors',
+        'layout/_footer';
 
 
         @import '_underconstruction';

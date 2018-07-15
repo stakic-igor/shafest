@@ -1,0 +1,32 @@
+.news {}
+
+.latest {
+    margin-bottom: 1rem;
+    &__header {
+        background-color: $sha-font-tangarine;
+        color: $sha-font-white;
+        font-size: .750rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: .500rem;
+        margin-bottom: .250rem;
+        &__megaphone {
+    
+        }
+        &__date {
+            margin: 0;
+            line-height: 1;
+        }
+    }
+    &__text {
+        padding: .500rem;
+        font-size: .750rem;
+        line-height: 1.5;
+    }
+    &__signature {
+        text-align: right;
+        padding: .500rem;
+        font-size: .750rem;
+    }
+}

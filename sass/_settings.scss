@@ -26,5 +26,6 @@ $general-animation-speed: 280ms;
 // Layers, z-index oreder of elements
 // Use: z-index: layer(param);
 $layer: (
-  header: 9000
+  header: 9000,
+  to-top: 9000
 );

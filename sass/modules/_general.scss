@@ -2,7 +2,10 @@ body {
   font-family: $base-font, $fallback-font;
   font-size: $base-font-size;
 }
-
+::selection {
+  background-color: $sha-font-tangarine;
+  color: $sha-font-white;
+}
 .h1,
 .h2,
 .h3,
@@ -41,7 +44,14 @@ h5 {
 h6 {
   font-size: 1rem;
 }
-
-.content {
+p {
+  font-size: inherit;
+  line-height: $base-line-height;
+  margin-bottom: 1rem;
+}
+.content-padding {
   padding: 2rem 0;
+}
+.text-align-center {
+  text-align: center;
 }
