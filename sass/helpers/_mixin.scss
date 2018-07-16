@@ -47,3 +47,7 @@
   user-select: none;
 }
 
+@mixin link {
+	color: $sha-font-tangarine;
+	text-decoration: underline;
+}

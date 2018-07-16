@@ -5,6 +5,25 @@
   background-color: $sha-scarlet;
   background-blend-mode: multiply;
   box-sizing: border-box;
+  &__heading {
+    color: $sha-font-white;
+    margin-bottom: 1.5rem;
+  }
+  &__logo__img {
+    width: 100%;
+    height: auto;
+    user-select: none;
+  }
+  & ul li {
+    margin-bottom: .500rem;
+  }
+}
+.line-up {
+  display: flex;
+  justify-content: center;
+  &__link {
+    margin: 0 1rem;
+  }
 }
 .post-footer {
   background: $sha-black;

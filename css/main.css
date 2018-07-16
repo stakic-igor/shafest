@@ -57,6 +57,34 @@ table {
   border-spacing: 0;
 }
 
+.card-img-top {
+  overflow: hidden;
+}
+
+.card-img-top > img {
+  width: 100%;
+  -webkit-transition: all 280ms ease-in;
+  transition: all 280ms ease-in;
+}
+
+.card:hover .card-img-top > img {
+  will-change: transform;
+  -webkit-transform: scale(1.1) rotate(-2.5deg);
+  transform: scale(1.1) rotate(-2.5deg);
+}
+
+.card-footer {
+  border-top: 1px solid transparent;
+  background-color: transparent;
+}
+
+.hash-tag {
+  font-family: "Roboto-Regular";
+  display: inline-block;
+  color: #fdb813;
+  padding: .500rem;
+}
+
 @font-face {
   font-family: "Roboto-Regular";
   font-style: normal;
@@ -144,6 +172,11 @@ h5 {
 .h6,
 h6 {
   font-size: 1rem;
+}
+
+a {
+  color: #fdb813;
+  text-decoration: underline;
 }
 
 p {
@@ -246,15 +279,6 @@ p {
 
 .header {
   background-color: white;
-  position: static;
-  -webkit-transition: all 280ms ease-in;
-  transition: all 280ms ease-in;
-}
-
-.header--fixed {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 .teaser {
@@ -263,6 +287,16 @@ p {
   background-size: 100% auto;
   height: 100vh;
   width: 100%;
+}
+
+.about {
+  background-image: url("../img/miksa3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  background-blend-mode: multiply;
+  background-color: purple;
 }
 
 .miksa__img {
@@ -332,6 +366,37 @@ p {
   background-blend-mode: multiply;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.footer__heading {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.footer__logo__img {
+  width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.footer ul li {
+  margin-bottom: .500rem;
+}
+
+.line-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.line-up__link {
+  margin: 0 1rem;
 }
 
 .post-footer {

@@ -44,11 +44,17 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
+a {
+  @include link;
+}
+
 p {
   font-size: inherit;
   line-height: $base-line-height;
   margin-bottom: 1rem;
 }
+
 .content-padding {
   padding: 2rem 0;
 }

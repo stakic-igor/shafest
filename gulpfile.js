@@ -57,19 +57,17 @@ gulp.task('css:min', () => {
     .pipe(gulp.dest('css'))
 });
 
-// Configure jsconcat and jsmin
+// Configure jsconcat and jsmin 
+var jsSource = ['js/*.js', '!js/*.min.js'];
 gulp.task('compilejs', function() {
-    gulp.src(
-        [
-            'js/**/*.js'
-        ])
-    .pipe(sourcemaps.init())
+    return gulp.src('js/*')
+    //.pipe(sourcemaps.init())
         //.pipe(concat('scripts.js'))
 //    .pipe(uglify())
     .pipe(rename({
             suffix: '.min'
             }))
-    .pipe(sourcemaps.write('.'))
+    //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('js/'));
 });
 
@@ -77,7 +75,8 @@ gulp.task('copy-npm', () => {
     gulp.src(
         [
             npmPath + 'jquery/dist/jquery.min.js',
-            //npmPath + 'popper.js/dist/popper.min.js'
+            npmPath + 'bootstrap/dist/js/bootstrap.min.js',
+            npmPath + 'popper.js/dist/popper.min.js'
         ],  {base: npmPath}
     )
     .pipe(gulp.dest('vendors'));

@@ -29,3 +29,29 @@ $layer: (
   header: 9000,
   to-top: 9000
 );
+
+.card-img-top {
+  overflow: hidden;
+}
+.card-img-top > img {
+  width: 100%;
+  transition:  all 280ms ease-in;
+  
+} 
+
+.card:hover .card-img-top > img {
+  will-change: transform;
+  transform: scale(1.1) rotate(-2.5deg);
+}
+
+.card-footer {
+  border-top: 1px solid transparent;
+  background-color: transparent;
+}
+
+.hash-tag {
+  font-family: $base-font;
+  display: inline-block;
+  color: $sha-font-tangarine;
+  padding: .500rem;
+}
