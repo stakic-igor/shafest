@@ -3,12 +3,20 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  z-index: layer(header);
   @include position(fixed);
   width: 100%;
+  &--fixed {
+    background-color: $sha-white;
+  }
+}
+.header--fixed .nav__link {
+  color: $sha-font-tangarine;
 }
 .nav {
   // hack for inline elements to lose default margin
   font-size: 0;
+  user-select: none;
   &__item {
     font-size: 1rem;
     display: inline-block;

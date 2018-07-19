@@ -57,20 +57,6 @@ gulp.task('css:min', () => {
     .pipe(gulp.dest('css'))
 });
 
-// Configure jsconcat and jsmin 
-var jsSource = ['js/*.js', '!js/*.min.js'];
-gulp.task('compilejs', function() {
-    return gulp.src('js/*')
-    //.pipe(sourcemaps.init())
-        //.pipe(concat('scripts.js'))
-//    .pipe(uglify())
-    .pipe(rename({
-            suffix: '.min'
-            }))
-    //.pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('js/'));
-});
-
 gulp.task('copy-npm', () => {
     gulp.src(
         [
@@ -87,20 +73,14 @@ gulp.task('watch', () => {
     gulp.watch('sass/**/*.scss', () => { 
         runSequence('clean:css', 'sass', 'autoprefixer', ['css:min']) 
     });
-    //    gulp.watch('web/js/twigjs/**/*.js', () => {runSequence('compilejs')});
-    gulp.watch('js/**/*.js', () => {
-        runSequence('clean:js', 'compilejs')
-    });
 });
 
 // Run build task
 gulp.task('build', (callback) => {
     runSequence(
-        'clean:css', 
-        'clean:js', 
+        'clean:css',
         'sass', 
         'autoprefixer',
-        'compilejs',
         ['css:min'], 
         callback
     );

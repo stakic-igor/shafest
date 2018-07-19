@@ -289,12 +289,25 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  z-index: 9000;
   position: fixed;
   width: 100%;
 }
 
+.header--fixed {
+  background-color: white;
+}
+
+.header--fixed .nav__link {
+  color: #fdb813;
+}
+
 .nav {
   font-size: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav__item {
@@ -386,6 +399,10 @@ p {
 
 .single_news__img {
   width: 100%;
+}
+
+.program__row {
+  margin-bottom: 2rem;
 }
 
 .sponsors {
