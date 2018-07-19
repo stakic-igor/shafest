@@ -343,6 +343,16 @@ p {
   font-size: .750rem;
 }
 
+.single_news__author_timestamp {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #bdc3c7;
+}
+
+.single_news__img {
+  width: 100%;
+}
+
 .sponsors {
   background-color: white;
 }
