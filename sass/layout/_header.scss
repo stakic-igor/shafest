@@ -1,3 +1,23 @@
 .header {
   background-color: white;
-} 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.nav {
+  // hack for inline elements to lose default margin
+  font-size: 0;
+  &__item {
+    font-size: 1.250rem;
+    display: inline-block;
+  }
+  &__link {
+    display: inline-block;
+    padding: 1.500rem 3rem;
+    text-decoration: none;
+    &--tickets {
+      background-color: $sha-tangarine;
+      color: $sha-font-white;
+    }
+  }
+}

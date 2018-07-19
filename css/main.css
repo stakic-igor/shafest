@@ -279,6 +279,36 @@ p {
 
 .header {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.nav {
+  font-size: 0;
+}
+
+.nav__item {
+  font-size: 1.250rem;
+  display: inline-block;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 1.500rem 3rem;
+  text-decoration: none;
+}
+
+.nav__link--tickets {
+  background-color: #fdb813;
+  color: white;
 }
 
 .teaser {
