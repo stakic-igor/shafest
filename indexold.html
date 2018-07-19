@@ -34,17 +34,33 @@
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 </head>
 <body>
-  <header>
-
-  </header>
-  <section class="teaser" id="to-top">
+  <header class="header" id="to-top">
+      <div class="logo"></div>
+      <nav class="nav">
+        <ul>
+          <li class="nav__item">
+            <a href="#about-sha-fest" class="nav__link">o Sa fetivalu</a>
+          </li>
+          <li class="nav__item">
+            <a href="#line-up" class="nav__link">Program</a>
+          </li>
+          <li class="nav__item">
+              <a href="#news" class="nav__link">Novosti</a>
+            </li>
+          <li class="nav__item">
+            <a href="#tickets" class="nav__link nav__link--tickets">Ulaznice</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  <section class="teaser">
     <div class="container">
       <div class="row">
         <div class="col-md-12">x</div>
       </div>
     </div>
   </section>
-  <section class="about content-padding">
+  <section class="about content-padding" id="about-sha-fest">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -83,14 +99,14 @@
       </div>
     </div>
   </section><!-- end miksa -->
-  <section class="miksa content-padding">
+  <section class="miksa content-padding" id="about-sha">
     <div class="container">
+      <h2 class="text-align-center">O Mikši</h2>
       <div class="row">
         <div class="col-md-6">
           <img src="img/miksa.jpg" alt="Dalibor Popović Mikša" class="miksa__img">
         </div>
         <div class="col-md-6">
-          <h4>O Mikši</h4>
           <p>Hiljadu slika, hiljadu nota, hiljadu riječi…</p>
           <p>Ovo bi bio opis talenata i duše jednog velikog dječaka, velikog umjetnika i sanjara.</p>
           <p>Nije više sa nama, ali njegove slike i njegova muzika jesu i živjeće zauvijek.</p>
@@ -103,7 +119,7 @@
     </div>
   </section><!-- end teaser -->
 
-  <section class="line-up content-padding">
+  <section class="line-up content-padding" id="line-up">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -170,7 +186,7 @@
               <img src="img/lineup/straight1.jpg" alt="DBAU">
             </div>
             <div class="card-body">
-              <h5 class="card-title">Sopot</h5>
+              <h5 class="card-title">Straight Jackin</h5>
               <p class="card-text"></p>
             </div>
             <div class="card-footer">
@@ -182,9 +198,9 @@
     </div>
   </section><!-- end lineup -->
 
-  <section class="tickets content-padding">
+  <section class="tickets content-padding" id="tickets">
     <div class="container">
-      <h2 class="text-align-center">Karte</h2>
+      <h2 class="text-align-center">Ulaznice</h2>
       <div class="row">
         <div class="col-md-12">
           <p>Ulaz na Promo Night 17. avgusta je besplatan. Dolaskom na prvo veče festivala koje je besplatno ostvarujete mogućnost popusta za kupovinu ulaznica i pića drugog dan festivala.</p>
@@ -194,7 +210,7 @@
       </div>
     </div>
   </section>
-  <section class="sponsors content-padding">
+  <section class="sponsors content-padding" id="sponsors">
     <div class="container">
       <h2 class="text-align-center">Generalni sponzor</h2>
       <div class="row justify-content-center">
@@ -266,7 +282,14 @@
     <div class="container content-padding">
       <div class="row">
         <div class="col-md-4 col-sm-12">
-          <h6 class="footer__heading">Footer 1</h6>
+          <h6 class="footer__heading">Sita Map</h6>
+          <ul>
+            <li><a href="#about-sha-fest">O Sa Festivalu</a></li>
+            <li><a href="#about-sha">O Miksi</a></li>
+            <li><a href="#news">Novosti</a></li>
+            <li><a href="#sponsors">Sponzori</a></li>
+            <li><a href="#tickets">Ulaznice</a></li>
+          </ul>
         </div>
         <div class="col-md-4 col-sm-12">
           <h6 class="footer__heading">Kontakt</h6>
