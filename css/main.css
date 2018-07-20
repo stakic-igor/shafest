@@ -294,6 +294,12 @@ p {
   width: 100%;
 }
 
+.header__logo__img {
+  display: none;
+  width: auto;
+  height: 54px;
+}
+
 .header--fixed {
   background-color: white;
 }
@@ -330,11 +336,41 @@ p {
 }
 
 .teaser {
-  background-image: url("../img/home-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   height: 100vh;
   width: 100%;
+}
+
+.teaser__video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.teaser__ctrl {
+  color: white;
+  bottom: 10%;
+  position: absolute;
+}
+
+.hash {
+  color: white;
+  font-size: 5rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  background: orange;
+  color: white;
+  opacity: 0.7;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
 
 .about {
@@ -347,9 +383,17 @@ p {
   background-color: purple;
 }
 
+.miksa {
+  background-color: white;
+}
+
 .miksa__img {
   width: 100%;
   height: auto;
+}
+
+.news {
+  background-color: white;
 }
 
 .latest {
@@ -401,8 +445,16 @@ p {
   width: 100%;
 }
 
+.program {
+  background-color: white;
+}
+
 .program__row {
   margin-bottom: 2rem;
+}
+
+.tickets {
+  background-color: white;
 }
 
 .sponsors {

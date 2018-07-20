@@ -6,6 +6,13 @@
   z-index: layer(header);
   @include position(fixed);
   width: 100%;
+  &__logo {
+    &__img {
+      display: none;
+      width: auto;
+      height: 54px;
+    }
+  }
   &--fixed {
     background-color: $sha-white;
   }

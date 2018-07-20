@@ -1,7 +1,29 @@
 .teaser {
-  background-image: url('../img/home-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
   height: 100vh;
   width: 100%;
+  &__video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: layer(teaser);
+  transform: translate(-50%, -50%);
+  @include position(fixed, $top: 50%, $left: 50%);
+  }
+  &__ctrl {
+    color: white;
+    bottom: 10%;
+    position: absolute;
+  }
+}
+
+.hash {
+  color: $sha-font-white;
+  font-size: 5rem;    
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  background: orange;
+  color: white;
+  opacity: 0.7;
+  @include position(fixed, $top: 50%, $left: 50%);
 }
