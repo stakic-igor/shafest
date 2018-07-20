@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.teaser').on('click', function() {
+    $('.icon-play').on('click', function() {
         $(".teaser__video")[0].play()
     });
 
