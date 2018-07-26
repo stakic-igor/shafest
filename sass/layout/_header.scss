@@ -5,18 +5,23 @@
   justify-content: space-between;
   align-items: center;
   z-index: layer(header);
-  @include position(fixed);
   width: 100%;
+  @include position(fixed);
+  @include respond-to(md) {
+    background-color: $sha-white;
+    height: 54px;
+  }
   &__logo {
     margin-left: 2.5%;
     &__img {
       display: none;
       width: auto;
-      height: 54px;
+      height: 48px;
     }
   }
   &--fixed {
     background-color: $sha-white;
+    height: 54px;
   }
 }
 .header--fixed .nav__link {
@@ -34,14 +39,20 @@
   @include respond-to(md) {
     margin-right: 2.5%;
   }
-  & ul {
+  &__dropdown {
     @include respond-to(md) {
       display: none;
+      background-color: $sha-font-white;
+      width: 100%;
+      @include position(absolute, $top: 53px, $left: 0);
     }
   }
   &__item {
     font-size: 1rem;
     display: inline-block;
+    @include respond-to(md) {
+      display: block;
+    }
   }
   &__link {
     display: inline-block;
@@ -53,8 +64,12 @@
     &:hover {
       color: $sha-font-tangarine;
     }
+    @include respond-to(md) {
+      color: $sha-font-tangarine;
+      display: block;
+    }
   }
-  // hmbirger icon
+  // hamburger icon
   &__icon {
     display: none;
     cursor: pointer;
@@ -63,6 +78,7 @@
     @include position(relative);
     @include respond-to(md) {
       display: block;
+      margin-left: 2.5%;
     }
     &__line {
       background-color: $sha-tangarine;
@@ -83,10 +99,9 @@
     }
   }
 }
-
 @include respond-to(md) {
-  input[id^="dropdown"]:checked + .nav {
+  
+  .nav-toggle {
     display: block;
   }
 }
-

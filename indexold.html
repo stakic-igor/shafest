@@ -36,19 +36,17 @@
 <body>
   <section class="teaser" id="to-top">
     <video src="videos/teaser.mp4" class="teaser__video" type="video/mp4" autoplay loop></video>
-    <div class="hash">#sha</div>
     <header class="header">
       <div class="header__logo">
         <img src="img/logo.png" alt="Sha Festival Logo" class="header__logo__img">
       </div>
       <nav class="nav">
-        <label for="dropdown" class="nav__icon">
+        <div class="nav__icon">
           <span class="nav__icon__line nav__icon__line--top"></span>
           <span class="nav__icon__line nav__icon__line--middle"></span>
           <span class="nav__icon__line nav__icon__line--bottom"></span>
-        </label>
-        <input type="checkbox" id="dropdown" class="dropdown">
-        <ul>
+        </div>
+        <ul class="nav__dropdown">
           <li class="nav__item">
             <a href="#about-sha-fest" class="nav__link">o Ša fetivalu</a>
           </li>
@@ -67,10 +65,9 @@
         </ul>
       </nav>
     </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">x</div>
-      </div>
+    <div class="teaser__msg">
+      <p>ŠA Fest je memorijalni festival posvećen <br />Daliboru Popoviću Mikši.</p>
+      <img src="img/logo-white.png" alt="ShaFfestLogo">
     </div>
     <div class="teaser__ctrl">
       <i class="icon-play"></i>
@@ -82,7 +79,6 @@
       <div class="row">
         <div class="col-md-6">
           <h2 class="text-align-center">O Ša festivalu</h2>
-          <p>ŠA Fest je memorijalni festival posvećen Daliboru Popoviću Mikši.</p>
           <h4>Zašto ŠA?</h4>
           <p>Zato što je ŠA bio potpis Mikšinih radova. ŠA je ostavio neizbrisiv trag u prijedorčanima, banjalučanima, beograđanima, zagrebčanima....ŠA je muzika, ŠA su slike, ŠA je zvuk saksofona,ŠA je emocija!</p>
           <p>ŠA nam svima mnogo znači i baš zato želimo da ŠA živi i kroz festival u njegovom Prijedoru u kojem je počeo svoju umjetničku karijeru.</p>
@@ -141,29 +137,23 @@
       <h2 class="text-align-center">Program</h2>
     </div>
     <div class="container">
-      <h3>Petak, 17. avgust</h3>
+      <h4>Petak, 17. avgust</h4>
       <div class="row">
         <div class="col-md-12">
-          <p>
-              Promo ŠA party
-              Autorski bendovi iz regije
-              Projekcije filmova na ljetnoj pozornici
-              Promotivna prodaja ulaznica i
-              Zagrijavanje za “main night”
-          </p>
-          <p>
-            The Bechars
-            Jall aux jaux, bihać
-            Ketpool
-            Kazoo
-            Double dog
-            The Shavers
-          </p>
+          <p>Promo Night! Ulaz Besplatan!</p>
+          <div class="friday-lineup">
+            <div class="friday-lineup__band">The Bechars</div>
+            <div class="friday-lineup__band">Jall aux jaux</div>
+            <div class="friday-lineup__band">Ketpool</div>
+            <div class="friday-lineup__band">Kazoo</div>
+            <div class="friday-lineup__band">Double dog</div>
+            <div class="friday-lineup__band">The Shavers</div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <h3>Subota, 18. avgust</h3>
+      <h4>Subota, 18. avgust</h4>
       <div class="row program__row">
         <div class="col-md-4">
           <div class="card">

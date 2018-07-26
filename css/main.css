@@ -265,8 +265,15 @@ p {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9000;
-  position: fixed;
   width: 100%;
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-color: white;
+    height: 54px;
+  }
 }
 
 .header__logo {
@@ -276,11 +283,12 @@ p {
 .header__logo__img {
   display: none;
   width: auto;
-  height: 54px;
+  height: 48px;
 }
 
 .header--fixed {
   background-color: white;
+  height: 54px;
 }
 
 .header--fixed .nav__link {
@@ -306,14 +314,25 @@ p {
 }
 
 @media (max-width: 768px) {
-  .nav ul {
+  .nav__dropdown {
     display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 53px;
+    left: 0;
   }
 }
 
 .nav__item {
   font-size: 1rem;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .nav__item {
+    display: block;
+  }
 }
 
 .nav__link {
@@ -330,6 +349,13 @@ p {
   color: #fdb813;
 }
 
+@media (max-width: 768px) {
+  .nav__link {
+    color: #fdb813;
+    display: block;
+  }
+}
+
 .nav__icon {
   display: none;
   cursor: pointer;
@@ -341,6 +367,7 @@ p {
 @media (max-width: 768px) {
   .nav__icon {
     display: block;
+    margin-left: 2.5%;
   }
 }
 
@@ -366,7 +393,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  input[id^="dropdown"]:checked + .nav {
+  .nav-toggle {
     display: block;
   }
 }
@@ -412,6 +439,19 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.teaser__msg {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.teaser__msg > img {
+  width: 100px;
+  height: auto;
 }
 
 .icon-pause {
@@ -518,6 +558,21 @@ p {
 
 .program__row {
   margin-bottom: 2rem;
+}
+
+.friday-lineup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fdb813;
+  margin-bottom: 2rem;
+}
+
+.friday-lineup__band {
+  padding: 1rem;
 }
 
 .tickets {

@@ -24,7 +24,16 @@
       transform: translate(-50%, -50%);
       @include position(absolute, $top: 50%, $left: 50%);
     }
-  } 
+  }
+  &__msg {
+    color: $sha-font-white;
+    font-size: 2rem;
+    @include position(absolute, $top: 30%, $left: 5%);
+    & > img {
+      width: 100px;
+      height: auto;
+    }
+  }
 }
 .icon-pause {
   display: none;

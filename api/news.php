@@ -1,6 +1,9 @@
 <?php
 
-
+$hostName = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'shafest';
 
 try {
     $db = new PDO("mysql:host=$hostName;dbname=$database", $username, $password);
@@ -14,7 +17,7 @@ try {
 $id = (empty($_GET['id'])) ? null : $_GET['id'];
 
 $stmt = $db->prepare('
-    SELECT id, title, content, author
+    SELECT *
     FROM articles
     ' . (empty($_GET['id']) ? '' : 'WHERE id = :id') . '
     ORDER BY id ASC
@@ -28,9 +31,4 @@ if(!empty($id)){
 $stmt->execute();
 header('Content-Type: application/json');
 
-
-if(!empty($id)){
-    echo json_encode($stmt->fetch(\PDO::FETCH_ASSOC));
-} else {
-    echo json_encode($stmt->fetchAll(\PDO::FETCH_ASSOC));
-}
+echo json_encode($stmt->fetch(\PDO::FETCH_ASSOC));

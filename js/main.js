@@ -34,4 +34,9 @@ $(document).ready(function() {
         }
     })
 
+    // menu toggle
+    $('.nav__icon').on('click', function() {
+        $('.nav .nav__dropdown').toggleClass('nav-toggle')
+    })
+
 })
