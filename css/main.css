@@ -249,34 +249,6 @@ p {
   left: 50%;
 }
 
-.main-nav {
-  font-size: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.main-nav__item {
-  font-family: "Roboto-Light", "Arial", sans-serif;
-  font-size: 16px;
-  display: inline-block;
-}
-
-.main-nav__link {
-  color: #fdb813;
-  display: block;
-  text-decoration: none;
-  padding: .500rem 1rem;
-  -webkit-transition: all 280ms ease-in;
-  transition: all 280ms ease-in;
-}
-
-.main-nav__link:hover {
-  background: #fdb813;
-  color: white;
-}
-
 .header {
   background-color: transparent;
   display: -webkit-box;
@@ -289,9 +261,16 @@ p {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 9000;
   position: fixed;
   width: 100%;
+}
+
+.header__logo {
+  margin-left: 2.5%;
 }
 
 .header__logo__img {
@@ -308,12 +287,28 @@ p {
   color: #fdb813;
 }
 
+.dropdown {
+  display: none;
+}
+
 .nav {
   font-size: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    margin-right: 2.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -335,6 +330,47 @@ p {
   color: #fdb813;
 }
 
+.nav__icon {
+  display: none;
+  cursor: pointer;
+  height: 28px;
+  width: 44px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav__icon {
+    display: block;
+  }
+}
+
+.nav__icon__line {
+  background-color: #fdb813;
+  border-radius: 1px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+}
+
+.nav__icon__line--top {
+  top: 0%;
+}
+
+.nav__icon__line--middle {
+  top: 50%;
+}
+
+.nav__icon__line--bottom {
+  top: 100%;
+}
+
+@media (max-width: 768px) {
+  input[id^="dropdown"]:checked + .nav {
+    display: block;
+  }
+}
+
 .teaser {
   height: 100vh;
   width: 100%;
@@ -354,9 +390,40 @@ p {
 }
 
 .teaser__ctrl {
-  color: white;
-  bottom: 10%;
+  border: 8px solid #fdb813;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.teaser__ctrl > [class*='icon'] {
+  color: #fdb813;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.icon-pause {
+  display: none;
+}
+
+.icon--hide {
+  display: none;
+}
+
+.icon--show {
+  display: inline-block;
 }
 
 .hash {

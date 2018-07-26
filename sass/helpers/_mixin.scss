@@ -51,3 +51,16 @@
 	color: $sha-font-tangarine;
 	text-decoration: underline;
 }
+
+
+// media queries
+
+@mixin respond-to($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	} @else {
+		@warn "No value could be retrived from #{$breakpoint}! Make sure it is defined in $breakpoints map.";
+	}
+}

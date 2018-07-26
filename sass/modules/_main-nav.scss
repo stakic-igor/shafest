@@ -1,21 +1,20 @@
-.main-nav {
-  font-size: 0; // Hack, remove margin between inline-block elements
-  user-select: none;
-  // Elemets
-  &__item {
-    font-family: $light-font, $fallback-font;
-    font-size: $base-font-size;
-    display: inline-block;
-  }
-  &__link {
-    color: $sha-font-tangarine;
-    display: block;
-    text-decoration: none;
-    padding: .500rem 1rem;
-    transition: all $general-animation-speed ease-in;
-    &:hover {
-      background: $sha-tangarine;
-      color: $sha-font-white;
-    }
-  }
-}
+// .nav {
+//   font-size: 0; // Hack, remove margin between inline-block elements
+//   user-select: none;
+//   // Elemets
+//   &__item {
+//     font-family: $light-font, $fallback-font;
+//     font-size: $base-font-size;
+//     display: inline-block;
+//   }
+//   &__link {
+//     color: $sha-font-tangarine;
+//     display: block;
+//     text-decoration: none;
+//     padding: .500rem 1rem;
+//     transition: all $general-animation-speed ease-in;
+//     &:hover {
+//       color: $sha-font-tangarine;
+//     }
+//   }
+// } 

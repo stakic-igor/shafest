@@ -3,10 +3,12 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   z-index: layer(header);
   @include position(fixed);
   width: 100%;
   &__logo {
+    margin-left: 2.5%;
     &__img {
       display: none;
       width: auto;
@@ -20,10 +22,23 @@
 .header--fixed .nav__link {
   color: $sha-font-tangarine;
 }
+
+// Hide checkbox as it is trigger for responsive menu
+.dropdown {
+  display: none;
+}
 .nav {
   // hack for inline elements to lose default margin
   font-size: 0;
   user-select: none;
+  @include respond-to(md) {
+    margin-right: 2.5%;
+  }
+  & ul {
+    @include respond-to(md) {
+      display: none;
+    }
+  }
   &__item {
     font-size: 1rem;
     display: inline-block;
@@ -39,4 +54,39 @@
       color: $sha-font-tangarine;
     }
   }
+  // hmbirger icon
+  &__icon {
+    display: none;
+    cursor: pointer;
+    height: 28px;
+    width: 44px;
+    @include position(relative);
+    @include respond-to(md) {
+      display: block;
+    }
+    &__line {
+      background-color: $sha-tangarine;
+      border-radius: 1px;
+      display: block;
+      height: 3px;
+      width: 100%;
+      @include position(absolute);
+      &--top {
+        top: 0%;
+      }
+      &--middle {
+        top: 50%;
+      }
+      &--bottom {
+        top: 100%;
+      }
+    }
+  }
 }
+
+@include respond-to(md) {
+  input[id^="dropdown"]:checked + .nav {
+    display: block;
+  }
+}
+

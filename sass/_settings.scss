@@ -21,7 +21,12 @@ $sha-font-tangarine: $sha-tangarine;
 // Animation
 $general-animation-speed: 280ms;
 
-
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
 
 // Maps 
 // Layers, z-index oreder of elements

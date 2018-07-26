@@ -11,12 +11,30 @@
   @include position(fixed, $top: 50%, $left: 50%);
   }
   &__ctrl {
-    color: white;
-    bottom: 10%;
-    position: absolute;
-  }
+    border: 8px solid $sha-tangarine;
+    border-radius: 50%;
+    background-color: $sha-white;
+    cursor: pointer;
+    height: 44px;
+    width: 44px;
+    user-select: none;
+    @include position(absolute, $bottom: 5%, $left: 5%);
+    & > [class*='icon'] {
+      color: $sha-font-tangarine;
+      transform: translate(-50%, -50%);
+      @include position(absolute, $top: 50%, $left: 50%);
+    }
+  } 
 }
-
+.icon-pause {
+  display: none;
+}
+.icon--hide {
+  display: none;
+}
+.icon--show {
+  display: inline-block;
+}
 .hash {
   color: $sha-font-white;
   font-size: 5rem;    
