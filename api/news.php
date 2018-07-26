@@ -1,9 +1,6 @@
 <?php
 
-$hostName = 'igorstakiccom1.ipagemysql.com';
-$username = 'shafest';
-$password = 'sh4fEEt#2018!';
-$database = 'shafest_db';
+
 
 try {
     $db = new PDO("mysql:host=$hostName;dbname=$database", $username, $password);
