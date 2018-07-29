@@ -1,0 +1,29 @@
+.loader {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: layer(loader);
+    @include position(fixed, $top: 0, $left:0);
+    &__wrap {
+        @include position(absolute, $top: 50%, $left: 50%);
+        transform: translate(-50%, -50%);
+    }
+    &__img {
+        animation: load-img 1200ms ease-in-out infinite;
+        display: block;
+        height: auto;
+        width: 100%;
+        transform-origin: center center;
+    }
+}
+@keyframes load-img {
+    0% { 
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}

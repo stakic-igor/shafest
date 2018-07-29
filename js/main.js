@@ -1,4 +1,6 @@
+
 $(document).ready(function() {
+    $('.loader').fadeOut();
         $('.icon-play').on('click', function() {
         $(".teaser__video")[0].play();
         $('.icon-pause').removeClass('icon--hide');

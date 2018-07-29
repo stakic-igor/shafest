@@ -19,9 +19,10 @@
 
 // Load Modules
 
-@import 'modules/_typography', 
+@import 'modules/_typography',
         'modules/_general',
         'modules/_buttons',
+        'modules/_loader',
         'modules/_to-top',
         'modules/_main-nav';
 
@@ -36,7 +37,5 @@
         'layout/_tickets',
         'layout/_location',
         'layout/_sponsors',
+        'layout/_gallery',
         'layout/_footer';
-
-
-        @import '_underconstruction';

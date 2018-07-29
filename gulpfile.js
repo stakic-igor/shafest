@@ -62,7 +62,10 @@ gulp.task('copy-npm', () => {
         [
             npmPath + 'jquery/dist/jquery.min.js',
             npmPath + 'bootstrap/dist/js/bootstrap.min.js',
-            npmPath + 'popper.js/dist/popper.min.js'
+            npmPath + 'popper.js/dist/popper.min.js',
+            npmPath + 'lightbox2/dist/css/lightbox.min.css',
+            npmPath + 'lightbox2/dist/images',
+            npmPath + 'lightbox2/dist/js/lightbox.min.js'
         ],  {base: npmPath}
     )
     .pipe(gulp.dest('vendors'));

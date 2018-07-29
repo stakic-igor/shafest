@@ -34,7 +34,8 @@ $breakpoints: (
 $layer: (
   teaser: -100,
   header: 9000,
-  to-top: 9000
+  to-top: 9000,
+  loader: 10000
 );
 
 .card-img-top {

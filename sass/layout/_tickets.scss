@@ -1,3 +1,13 @@
 .tickets {
     background-color: $sha-font-white;
+    &__sale {
+        & ul {
+            @include respond-to(md) {
+                margin: .500rem 0 1.5rem 0;
+            }
+            & li {
+                margin: .250rem 0;
+            }
+        }
+    }
 }

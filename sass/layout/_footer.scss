@@ -5,24 +5,50 @@
   background-color: $sha-scarlet;
   background-blend-mode: multiply;
   box-sizing: border-box;
+  &__cols {
+    margin-bottom: 1rem;
+    @include respond-to(md) {
+      margin-bottom: 2rem;
+    }
+  }
   &__heading {
     color: $sha-font-white;
     margin-bottom: 1.5rem;
+    @include respond-to(md) {
+      text-align: center;
+    }
   }
-  &__logo__img {
-    width: 100%;
-    height: auto;
-    user-select: none;
+  &__logo {
+    text-align: center;
+    &__img {
+      width: 100%;
+      height: auto;
+      user-select: none;
+      @include respond-to(md) {
+        width: 30%;
+      }
+    }
   }
   & ul li {
     margin-bottom: .500rem;
+    @include respond-to(md) {
+      text-align: center;
+    }
   }
 }
 .line-up {
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+  @include respond-to(md) {
+    align-items: center;
+    flex-flow: column nowrap;
+  }
   &__link {
-    margin: 0 1rem;
+    margin: 1rem;
+    @include respond-to(md) {
+      margin: .500rem 0;
+    }
   }
 }
 .post-footer {
