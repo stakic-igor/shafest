@@ -36,21 +36,6 @@
     }
   }
 }
-.line-up {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  @include respond-to(md) {
-    align-items: center;
-    flex-flow: column nowrap;
-  }
-  &__link {
-    margin: 1rem;
-    @include respond-to(md) {
-      margin: .500rem 0;
-    }
-  }
-}
 .post-footer {
   background: $sha-black;
   box-sizing: border-box;

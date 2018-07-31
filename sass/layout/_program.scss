@@ -1,5 +1,8 @@
 .program {
-    background-color: $sha-white;
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-color: #cccccc;
     &__row {
         margin-bottom: 2rem;
     }

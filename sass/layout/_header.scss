@@ -6,8 +6,9 @@
   align-items: center;
   z-index: layer(header);
   width: 100%;
+  height: 84px;
   @include position(fixed);
-  @include respond-to(md) {
+  @include respond-to(lg) {
     background-color: $sha-white;
     height: 54px;
   }
@@ -20,8 +21,12 @@
     }
   }
   &--fixed {
-    background-color: $sha-white;
+    background-color: rgba($sha-white, .9);
     height: 54px;
+    transition: all 180ms ease-in;
+    &:hover {
+      background-color: rgba($sha-white, 1);
+    }
   }
 }
 .header--fixed .nav__link {
@@ -40,7 +45,7 @@
     margin-right: 2.5%;
   }
   &__dropdown {
-    @include respond-to(md) {
+    @include respond-to(lg) {
       display: none;
       background-color: $sha-font-white;
       width: 100%;
@@ -48,23 +53,26 @@
     }
   }
   &__item {
-    font-size: 1rem;
+    font-size: 1.250rem;
     display: inline-block;
-    @include respond-to(md) {
+    @include respond-to(lg) {
       display: block;
     }
   }
   &__link {
     display: inline-block;
-    padding: 1.20rem 2rem;
+    padding: 1rem 1.250rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: $sha-font-white;
     transition: all 180ms ease-in;
     &:hover {
       color: $sha-font-tangarine;
     }
-    @include respond-to(md) {
+    @include respond-to(mlg) {
+      padding: 1.20rem 1.50rem;
+    }
+    @include respond-to(lg) {
       color: $sha-font-tangarine;
       display: block;
     }
@@ -76,7 +84,7 @@
     height: 28px;
     width: 44px;
     @include position(relative);
-    @include respond-to(md) {
+    @include respond-to(lg) {
       display: block;
       margin-left: 2.5%;
     }
@@ -99,7 +107,7 @@
     }
   }
 }
-@include respond-to(md) {
+@include respond-to(lg) {
   
   .nav-toggle {
     display: block;
