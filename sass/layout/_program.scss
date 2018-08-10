@@ -3,24 +3,55 @@
     background-size: cover;
     background-blend-mode: hard-light;
     background-color: #cccccc;
-    &__row {
-        margin-bottom: 2rem;
+    overflow: hidden;
+    @include position(relative);
+    &__title {
+        font-family: $bold-font;
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: $bold-font;
+        &__helptxt {
+            font-family: $bold-font;
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: .750rem;
+        }
+    }
+    &__subtitle {
+        font-family: $bold-font;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 0.500rem;
+    }
+    &__event {
+        text-align: center;
+        margin-bottom: .250rem;
+        line-height: 1.2;
+    }
+    &__bottom {
+        font-size: .750rem;
+        line-height: 1.2;
+        text-align: center;
+    }
+    &--rotate {
+        margin-top: 2rem;
+        transform: rotate(-3.5deg);
     }
 }
 
-.friday-lineup {
-    display: flex;
-    justify-content: space-between;
-    background-color: $sha-tangarine;
-    margin-bottom: 2rem;
-    @include respond-to(md) {
-        flex-flow: column nowrap;
-        align-items: center;
-    }
+.lineup {
+    margin: 3rem 0;
+    text-align: center;
     &__band {
-        padding: 1rem;
-    }
-    &__link {
-        color: $sha-black;
+        font-family: $bold-font;
+        text-transform: uppercase;
+        //transform: rotate(-5.5deg);
+        margin: 1rem 0;
+        &--large {
+            font-size: 2.500rem;
+        }
     }
 }

@@ -1,6 +1,6 @@
 // Load fonts with @font-face rule
 // Use Arial as fallback font
 
-@include font-face($base-font, #{$font-path}/OpenSans-Bold, 700, normal, eot woff woff2 ttf);
+@include font-face($bold-font, #{$font-path}/OpenSans-Bold, 700, normal, eot woff woff2 ttf);
 @include font-face($base-font, #{$font-path}/OpenSans-Regular, 400, normal, eot woff woff2 ttf);
-@include font-face($base-font, #{$font-path}/OpenSans-Light, 300, normal, eot woff woff2 ttf);
+@include font-face($light-font, #{$font-path}/OpenSans-Light, 300, normal, eot woff woff2 ttf);

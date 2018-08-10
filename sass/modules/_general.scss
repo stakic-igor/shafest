@@ -62,3 +62,13 @@ p {
 .text-align-center {
   text-align: center;
 }
+
+.bold {
+  font-family: $bold-font;
+}
+.light {
+  font-family: $light-font;
+}
+.normal {
+  font-family: $base-font;
+}

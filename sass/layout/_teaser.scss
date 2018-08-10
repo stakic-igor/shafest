@@ -31,18 +31,21 @@
   &__msg {
     text-align: center;
     color: $sha-font-white;
-    font-size: 2rem;
-    transform: translate(-50%, -50%);
-    @include position(absolute, $top: 50%, $left: 50%);
-    & > img {
-      display: inline-block;
-      width: 350px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
+    font-size: 1.5rem;
+    transform: translateX(-50%);
+    @include position(absolute, $bottom: 10%, $left: 50%);
     & > p {
       line-height: 26px;
     }
+  }
+  &__logo {
+    display: inline-block;
+    width: 28%;
+    min-width: 320px;
+    height: auto;
+    margin-bottom: 1rem;
+    transform: translate(-50%, -50%);
+    @include position(absolute, $top: 50%, $left: 50%);
   }
 }
 .icon-pause {

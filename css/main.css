@@ -86,7 +86,7 @@ table {
 }
 
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "OpenSans-Bold";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/OpenSans-Bold.eot?") format("eot"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("truetype");
@@ -100,7 +100,7 @@ table {
 }
 
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Light";
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/OpenSans-Light.eot?") format("eot"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.ttf") format("truetype");
@@ -134,8 +134,7 @@ h4,
 h5,
 h6 {
   color: inherit;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: "OpenSans-Bold";
   line-height: 1.5;
   margin-bottom: 1.500rem;
   -webkit-user-select: none;
@@ -192,6 +191,80 @@ p {
 
 .text-align-center {
   text-align: center;
+}
+
+.bold {
+  font-family: "OpenSans-Bold";
+}
+
+.light {
+  font-family: "Roboto-Light";
+}
+
+.normal {
+  font-family: "Roboto-Regular";
+}
+
+.button {
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: .250rem 1.250rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button--main {
+  color: white;
+  background-color: #fdb813;
+  width: 50%;
+}
+
+.label {
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: .250rem;
+}
+
+.label--block {
+  display: block;
+}
+
+.input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .250rem;
+  width: 100%;
+  margin: .250rem 0;
+}
+
+.textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: .250rem;
+  width: 100%;
+  margin: .250rem 0;
+  height: 4.5rem;
+}
+
+.input-group {
+  margin: 1rem 0;
+}
+
+.help-text {
+  font-size: .750rem;
+  margin: .250rem 0;
 }
 
 .loader {
@@ -367,6 +440,7 @@ p {
 
 .nav {
   font-size: 0;
+  font-family: "Roboto-Light";
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -520,23 +594,29 @@ p {
 .teaser__msg {
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+}
+
+.teaser__msg > p {
+  line-height: 26px;
+}
+
+.teaser__logo {
+  display: inline-block;
+  width: 28%;
+  min-width: 320px;
+  height: auto;
+  margin-bottom: 1rem;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
-}
-
-.teaser__msg > img {
-  display: inline-block;
-  width: 350px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.teaser__msg > p {
-  line-height: 26px;
 }
 
 .icon-pause {
@@ -579,9 +659,13 @@ p {
   background-color: white;
 }
 
+.miksa__img-wrap {
+  overflow: hidden;
+}
+
 .miksa__img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 
 .news {
@@ -642,41 +726,65 @@ p {
   background-size: cover;
   background-blend-mode: hard-light;
   background-color: #cccccc;
+  overflow: hidden;
+  position: relative;
 }
 
-.program__row {
-  margin-bottom: 2rem;
+.program__title {
+  font-family: "OpenSans-Bold";
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "OpenSans-Bold";
 }
 
-.friday-lineup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background-color: #fdb813;
-  margin-bottom: 2rem;
+.program__title__helptxt {
+  font-family: "OpenSans-Bold";
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: .750rem;
 }
 
-@media (max-width: 768px) {
-  .friday-lineup {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
+.program__subtitle {
+  font-family: "OpenSans-Bold";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.500rem;
 }
 
-.friday-lineup__band {
-  padding: 1rem;
+.program__event {
+  text-align: center;
+  margin-bottom: .250rem;
+  line-height: 1.2;
 }
 
-.friday-lineup__link {
-  color: #080708;
+.program__bottom {
+  font-size: .750rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.program--rotate {
+  margin-top: 2rem;
+  -webkit-transform: rotate(-3.5deg);
+  transform: rotate(-3.5deg);
+}
+
+.lineup {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.lineup__band {
+  font-family: "OpenSans-Bold";
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.lineup__band--large {
+  font-size: 2.500rem;
 }
 
 .tickets {
@@ -706,6 +814,8 @@ p {
 .sponsors__logo {
   width: 100%;
   height: auto;
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
 }
 
 .gallery__link {
@@ -722,6 +832,10 @@ p {
 .gallery__img__thumb {
   width: 7rem;
   border-radius: 4px;
+}
+
+.contact {
+  background-color: white;
 }
 
 .footer {

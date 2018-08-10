@@ -1,0 +1,17 @@
+.button {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: .250rem 1.250rem;
+    line-height: 1.5;
+    text-align: center;
+    &--main {
+        color: $sha-font-white;
+        background-color: $sha-tangarine;
+        width: 50%;
+    }
+}
