@@ -1,9 +1,14 @@
 .sponsors {
     background-color: $sha-white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../img/footer-bg.jpg');
+    background-blend-mode: hard-light;
+    background-color: #ccc;
     &__link {
         display: block;
         width: 100%;
-        margin: 1rem 0;
+        margin: 1rem 0 2rem 0;
     }
     &__logo {
         width: 100%;

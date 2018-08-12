@@ -21,7 +21,7 @@
     width: 44px;
     user-select: none;
     transform: translateX(-50%);
-    @include position(absolute, $bottom: 5%, $left: 50%);
+    @include position(absolute, $bottom: 5%, $left: 5%);
     & > [class*='icon'] {
       color: $sha-font-tangarine;
       transform: translate(-50%, -50%);
@@ -32,8 +32,9 @@
     text-align: center;
     color: $sha-font-white;
     font-size: 1.5rem;
+    font-family: $light-font;
     transform: translateX(-50%);
-    @include position(absolute, $bottom: 10%, $left: 50%);
+    @include position(absolute, $bottom: 5%, $left: 50%);
     & > p {
       line-height: 26px;
     }
@@ -56,14 +57,4 @@
 }
 .icon--show {
   display: inline-block;
-}
-.hash {
-  color: $sha-font-white;
-  font-size: 5rem;    
-  transform: translate(-50%, -50%);
-  font-weight: 700;
-  background: orange;
-  color: white;
-  opacity: 0.7;
-  @include position(fixed, $top: 50%, $left: 50%);
 }

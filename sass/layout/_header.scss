@@ -2,7 +2,7 @@
   background-color: transparent;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: layer(header);
   width: 100%;
@@ -54,7 +54,7 @@
     }
   }
   &__item {
-    font-size: 1.250rem;
+    font-size: 1.125rem;
     display: inline-block;
     @include respond-to(lg) {
       display: block;

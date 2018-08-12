@@ -390,9 +390,9 @@ p {
   -webkit-box-direction: normal;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -465,7 +465,7 @@ p {
 }
 
 .nav__item {
-  font-size: 1.250rem;
+  font-size: 1.125rem;
   display: inline-block;
 }
 
@@ -579,7 +579,7 @@ p {
   transform: translateX(-50%);
   position: absolute;
   bottom: 5%;
-  left: 50%;
+  left: 5%;
 }
 
 .teaser__ctrl > [class*='icon'] {
@@ -595,10 +595,11 @@ p {
   text-align: center;
   color: white;
   font-size: 1.5rem;
+  font-family: "Roboto-Light";
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
 }
 
@@ -631,20 +632,6 @@ p {
   display: inline-block;
 }
 
-.hash {
-  color: white;
-  font-size: 5rem;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-weight: 700;
-  background: orange;
-  color: white;
-  opacity: 0.7;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-}
-
 .about {
   background-image: url("../img/miksa3.jpg");
   background-repeat: no-repeat;
@@ -653,6 +640,10 @@ p {
   color: white;
   background-blend-mode: multiply;
   background-color: purple;
+}
+
+.about h6 {
+  margin-bottom: 0;
 }
 
 .miksa {
@@ -789,26 +780,34 @@ p {
 
 .tickets {
   background-color: white;
+  background-image: url("../img/tickets.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  color: white;
 }
 
-@media (max-width: 768px) {
-  .tickets__sale ul {
-    margin: .500rem 0 1.5rem 0;
-  }
+.tickets__sales {
+  margin-top: 2rem;
 }
 
-.tickets__sale ul li {
-  margin: .250rem 0;
+.tickets__sales p {
+  margin-bottom: .500rem;
 }
 
 .sponsors {
   background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/footer-bg.jpg");
+  background-blend-mode: hard-light;
+  background-color: #ccc;
 }
 
 .sponsors__link {
   display: block;
   width: 100%;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .sponsors__logo {
@@ -836,6 +835,10 @@ p {
 
 .contact {
   background-color: white;
+  background-image: url("../img/miksa.png");
+  background-repeat: no-repeat;
+  background-position: 75% 50%;
+  background-attachment: fixed;
 }
 
 .footer {

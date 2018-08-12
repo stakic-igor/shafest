@@ -18,19 +18,19 @@ $(document).ready(function() {
 
     if($(window).scrollTop() > 300) {
         $('.header').addClass('header--fixed');
-        $('.header__logo__img').css({'display':'block'});
+       
     } else {
         $('.header').removeClass('header--fixed');
-        $('.header__logo__img').css({'display':'none'});
+        
     }
     $(window).on('scroll', function() {
 
         if($(window).scrollTop() > 300) {
             $('.header').addClass('header--fixed');
-            $('.header__logo__img').css({'display':'block'});
+            
         } else {
             $('.header').removeClass('header--fixed');
-            $('.header__logo__img').css({'display':'none'});
+           
         }
     })
 

@@ -1,13 +1,14 @@
 .tickets {
     background-color: $sha-font-white;
-    &__sale {
-        & ul {
-            @include respond-to(md) {
-                margin: .500rem 0 1.5rem 0;
-            }
-            & li {
-                margin: .250rem 0;
-            }
+    background-image: url('../img/tickets.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    color: $sha-white;
+    &__sales {
+        margin-top: 2rem;
+        & p {
+            margin-bottom: .500rem;
         }
     }
 }
